@@ -1,0 +1,28 @@
+%! Package = enve201
+%! Author = Len Washington III
+%! Date = 08/28/2025
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{enve201}[2025/08/28 A styling package for the class: ENVE 201 - "$CLASS_NAME".]
+
+\RequirePackage{kvoptions}
+
+\SetupKeyvalOptions{
+	family=enve,
+	prefix=enve@
+}
+
+\DeclareStringOption{title}
+\DeclareStringOption[Len Washington III]{author}
+\DeclareStringOption[\today]{date}
+\DeclareStringOption[{"$CLASS_NAME"}]{subject}
+\DeclareStringOption[{ENVE 201}]{subjectCode}
+
+\ProcessKeyvalOptions*
+
+\RequirePackage[author=\enve@author,
+	title=\enve@title,
+	date=\enve@date,
+	subject=\enve@subject,
+	code=\enve@subjectCode
+]{iitacademics}
