@@ -3,7 +3,7 @@
 %! Date = 08/28/2025
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{enve201}[2025/08/28 A styling package for the class: ENVE 201 - "$CLASS_NAME".]
+\ProvidesPackage{enve201}[2025/08/28 A styling package for the class: ENVE 201 - Earth Environmental Science.]
 
 \RequirePackage{kvoptions}
 
@@ -14,15 +14,15 @@
 
 \DeclareStringOption{title}
 \DeclareStringOption[Len Washington III]{author}
-\DeclareStringOption[\today]{date}
-\DeclareStringOption[{"$CLASS_NAME"}]{subject}
+\DeclareStringOption[{\today}]{date}
+\DeclareStringOption[{Earth Environmental Science}]{subject}
 \DeclareStringOption[{ENVE 201}]{subjectCode}
 
 \ProcessKeyvalOptions*
 
 \RequirePackage[author=\enve@author,
-	title=\enve@title,
-	date=\enve@date,
+	title={\enve@title},
+	date={\enve@date},
 	subject=\enve@subject,
 	code=\enve@subjectCode
 ]{iitacademics}

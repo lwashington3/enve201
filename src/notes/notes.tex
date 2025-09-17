@@ -1,0 +1,27 @@
+%! Author = Len Washington III
+%! Date = 9/8/25
+
+% Preamble
+\documentclass[
+	title={ENVE 201 Notes},
+	lecture={0}
+]{enve201notes}
+
+% Document
+\begin{document}
+
+\begin{center}
+\vspace{\fill}
+{\Huge ENVE 201 Notes}
+\vspace{\fill}
+\end{center}
+
+\tableofcontents
+
+\let\oldbegindocument\document
+\foreach \chap in {1,...,10}{%
+	\ExecuteMetaData[lecture\chap]{Lecture-\chap}
+}
+\let\document\oldbegindocument
+
+\end{document}
